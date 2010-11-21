@@ -14,16 +14,16 @@ void init(void);
 void main(void){
 	init();
 	for(;;){
-		if(secs++ == 60){
+		if(++secs == 60){
 			secs = 0;
 			min();
 		}
-		pause(58065);
+		pause(60000); // Empirical value
 	}
 }
 void init(void){
-	TRISA = 0b11000000; //Minutes
-	TRISB = 0b11110000; //Hours
+	TRISA = 0; //Minutes
+	TRISB = 0; //Hours
 	PORTA = 0;
 	PORTB = 0;
 }
@@ -32,14 +32,13 @@ void pause(unsigned int delay){
 	while(now++ < delay);
 }
 void min(void){
-	if(mins++ == 60){
+	if(++mins == 60){
 		mins = 0;
 		hour();
 	}
 	PORTA = mins;
 }
-
 void hour(void){
-	if(hours++ == 12) hours = 0;
+	if(++hours == 12) hours = 0;
 	PORTB = hours;
 }
