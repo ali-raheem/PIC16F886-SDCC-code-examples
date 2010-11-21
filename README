@@ -10,6 +10,16 @@ But take what you can from it!
 Contents:
 counter - counts up on one set of LEDs and down on another.
 clock - A 12hour binary clock. Not very accurate but I'm working on it.
+LEDs - Some pretty LED patterns.
+3colors - control a 3 colour LED.
+
+
+
+TODO:
+Add some schematic details.
+
 
 References:
 http://hackaday.com/2010/11/03/how-to-program-pics-using-linux/
+http://sdcc.sourceforge.net/
+
