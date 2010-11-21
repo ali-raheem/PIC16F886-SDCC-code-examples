@@ -3,8 +3,8 @@
 unsigned int at _CONFIG1 configWord1 = 0x20E4;
 unsigned int at _CONFIG2 configWord2 = 0x0700;
 unsigned char secs = 0;
-unsigned char mins = 0;
-unsigned char hours = 0;
+unsigned char mins = 1;
+unsigned char hours = 10;
 
 void min(void);
 void hour(void);
@@ -18,14 +18,14 @@ void main(void){
 			secs = 0;
 			min();
 		}
-		pause(60000); // Empirical value
+		pause(59016); // Empirical value
 	}
 }
 void init(void){
 	TRISA = 0; //Minutes
-	TRISB = 0; //Hours
-	PORTA = 0;
-	PORTB = 0;
+	TRISC = 0; //Hours
+	PORTA = mins;
+	PORTC = hours;
 }
 void pause(unsigned int delay){
 	unsigned int now = 0;
@@ -40,5 +40,5 @@ void min(void){
 }
 void hour(void){
 	if(++hours == 12) hours = 0;
-	PORTB = hours;
+	PORTC = hours;
 }
