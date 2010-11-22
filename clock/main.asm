@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 2.9.0 #5416 (Feb  3 2010) (UNIX)
-; This file was generated Sun Nov 21 22:00:50 2010
+; This file was generated Mon Nov 22 15:22:05 2010
 ;--------------------------------------------------------
 ; PIC port for the 14-bit core
 ;--------------------------------------------------------
@@ -211,12 +211,12 @@ _secs
 
 ID_main_1	idata
 _mins
-	db	0x01
+	db	0x16
 
 
 ID_main_2	idata
 _hours
-	db	0x0a
+	db	0x03
 
 ;--------------------------------------------------------
 ; overlayable items in internal ram 
@@ -381,7 +381,7 @@ _00117_DS_
 _00124_DS_
 	BTFSS	STATUS,0
 	GOTO	_00117_DS_
-;genSkipc:3083: created from rifx:0xbfc9e9b4
+;genSkipc:3083: created from rifx:0xbf8e32d4
 	RETURN	
 ; exit point of _pause
 

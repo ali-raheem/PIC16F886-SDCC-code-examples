@@ -1,6 +1,6 @@
 gplink-0.13.7 beta
 Copyright (c) 1998-2005 gputils project
-Listing File Generated: 11-21-2010  22:00:50
+Listing File Generated: 11-22-2010  15:22:05
  
  
 Address  Value    Disassembly              Source
@@ -8,7 +8,7 @@ Address  Value    Disassembly              Source
                                            ;--------------------------------------------------------
                                            ; File Created by SDCC : free open source ANSI-C Compiler
                                            ; Version 2.9.0 #5416 (Feb  3 2010) (UNIX)
-                                           ; This file was generated Sun Nov 21 22:00:50 2010
+                                           ; This file was generated Mon Nov 22 15:22:05 2010
                                            ;--------------------------------------------------------
                                            ; PIC port for the 14-bit core
                                            ;--------------------------------------------------------
@@ -221,12 +221,12 @@ Address  Value    Disassembly              Source
                                            
                                            ID_main_1	idata
                                            _mins
-                                           	db	0x01
+                                           	db	0x16
                                            
                                            
                                            ID_main_2	idata
                                            _hours
-                                           	db	0x0a
+                                           	db	0x03
                                            
                                            ;--------------------------------------------------------
                                            ; overlayable items in internal ram 
@@ -408,7 +408,7 @@ Address  Value    Disassembly              Source
                                            _00124_DS_
 0000ea   1c03     btfss	0x3, 0             	BTFSS	STATUS,0
 0000eb   28db     goto	0xdb                	GOTO	_00117_DS_
-                                           ;genSkipc:3083: created from rifx:0xbfc9e9b4
+                                           ;genSkipc:3083: created from rifx:0xbf8e32d4
 0000ec   0008     return                   	RETURN	
                                            ; exit point of _pause
                                            
