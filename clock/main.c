@@ -24,16 +24,17 @@ void main(void){
 			time.secs = 0;
 			min();
 		}
+		PORTA ^= 0x80; //Second blinker
 		pause(DELAY); //Empirical value defined above.
 	}
 }
 void init(void){
 	//0utput and 1nput
-	TRISA = 0b11000000; //Minutes
+	TRISA = 0b01000000; //Minutes
 	TRISC = 0b11110000; //Hours
 	//Time set
-	time.hours = 10;
-	time.mins = 30;
+	time.hours = 15;
+	time.mins = 63;
 	time.secs = 0;
 	PORTA = time.mins;
 	PORTC = time.hours;
